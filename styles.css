@@ -1,29 +1,90 @@
+body{ 
+  font-family: Arial;
+  color: white;
+  background-color: rgb(25, 26, 26);
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.dashboard h1 {
+  font-family: fantasy;
+  letter-spacing: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgb(87, 210, 169);
+  margin: 0;
+  margin-bottom: 15px;
+}
+
 .grid { 
-  width: 300px;
-  height: 300px;
+  border-radius: 10px;
+  width: 450px;
+  height: 450px;
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgb(23, 23, 32);
+  background-image: url('assets/background.png');
+  background-size: cover;
+  background-position: left; 
+  background-repeat: no-repeat;
+  margin: auto;
 }
 
 .grid div {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.restart-button {
+  background-color: white;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 20px aquamarine;
+  font-family: fantasy;
+  border-radius: 7px;
+  color: rgb(27, 27, 27);
+}
+
+.restart-button:hover {
+  box-shadow: 0px 0px 10px aquamarine;
+ 
 }
 
 .invader {
-  background-color: purple;
-  border-radius: 10px;
+    background-image: url('assets/invader.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 10px;
+ 
 }
 
 .shooter {
-  background-color: green;
+  background-image: url('assets/spaceship.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  
 }
 
 .laser {
-  background-color: orange;
+  background-image: url('assets/laser.png');
+  background-size: contain;
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 
 .boom {
-  background-color: red;
+  background-image: url('assets/invader-dead.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
 }
