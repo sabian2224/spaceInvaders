@@ -10,15 +10,14 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .dashboard h1 {
   letter-spacing: 2px;
-  padding-left: 20px;
-  padding-right: 20px;
   color: rgb(255, 255, 245);
-  margin: 0;
+ 
   margin-bottom: 15px;
 }
 
