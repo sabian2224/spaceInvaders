@@ -5,15 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Space Invaders</title>
   <link rel="stylesheet" href="styles.css"> 
+
+  <link href="https://fonts.cdnfonts.com/css/panton" rel="stylesheet">
+
 </head>
 <body>
 
-  
+
   <div class="dashboard">
+
     <h1>SPACE INVADERS</h1>
     <h1 class="results">0</h1>
     <div class="grid"></div>
-    <a href="index.html"><button class="restart-button">Restart</button></a>
+   
+    <button class="myBtn shoot-btn" onclick="shootButton()">
+      shoot
+    </button>
+
+    <div class="command-container">
+      <button class="myBtn" onclick="moveLeftButton()">
+        <img src="assets/left-arrow.png" class="btn-icon">
+      </button>
+
+      <button class="myBtn" onclick="moveRightButton()">
+        <img src="assets/right-arrow.png" class="btn-icon">
+      </button>
+    </div>
+
+   <!--Should be fixed-->
+    <a href="index.html"><button class="myBtn restart">Restart</button></a>
+    
+
+
   </div>
  
   <script src="app.js"></script>
