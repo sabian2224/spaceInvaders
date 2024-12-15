@@ -1,124 +1,216 @@
-body{ 
-  font-family: panton;
-  color: white;
-  background-color: #0e161a;
-}
 
+   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
 
+   
 
-.dashboard {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20px;
-}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #0f172a, #4c1d95, #0f172a);
+      color: white;
+    
+    }
 
-.dashboard h1 {
-  letter-spacing: 2px;
-  color: rgb(255, 255, 245);
- 
-  margin-bottom: 15px;
-}
+    .dashboard {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-.grid { 
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
-  width: 450px;
-  height: 450px;
-  border: 1px solid black;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(23, 23, 32);
-  background-image: url('assets/background.png');
-  background-size: cover;
-  background-position: left; 
-  background-repeat: no-repeat;
-  margin: auto;
-}
+    .game-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
 
-.grid div {
-  width: 30px;
-  height: 30px;
-}
+    .game-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+      text-align: center;
+    }
 
-.shoot-btn{
-  margin-top: 2rem;
-}
+    .results {
+      font-size: 2rem;
+      color: #c084fc;
+      margin-bottom: 1rem;
+    }
 
-.command-container {
-  margin-top: 1rem;
-}
+    .grid { 
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+      width: 450px;
+      height: 450px;
+      border: 1px solid black;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgb(23, 23, 32);
+      background-image: url('assets/pexels-veeterzy-114979.jpg');
+      background-size: cover;
+      background-position: left; 
+      background-repeat: no-repeat;
+      margin: auto;
+    }
 
-.myBtn{
-  background-color: white;
-  border: none;
-  font-weight: bold;
-  font-family: panton;
-  padding: 10px 20px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  font-size: 18px;
-  border-radius: 5px;
-}
+    .grid div {
+      width: 30px;
+      height: 30px;
+    }
 
-.myBtn:hover {
-  opacity: 0.7;
-}
+    .invader {
+      background-image: url('assets/invader.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
 
-.btn-icon{
-  width: 20px;
-  margin-top: 2px;
-}
+    .shooter {
+      background-image: url('assets/spaceship.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
 
-.restart-button {
-  background-color: white;
-  padding: 10px 30px;
- 
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-  box-shadow: inset 0px 0px 20px aquamarine;
-  font-family: fantasy;
-  border-radius: 7px;
-  color: rgb(27, 27, 27);
-}
+    .laser {
+      background-image: url('assets/laser.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: shoot 0.3s ease-out;
+    }
 
-.restart{
-  margin-top: 1.5rem;
-}
+    .boom {
+      background-image: url('assets/invader-dead.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: explode 0.3s ease-out;
+    }
 
-.restart-button:hover {
-  box-shadow: 0px 0px 10px aquamarine;
- 
-}
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      width: 100%;
+    }
 
-.invader {
-    background-image: url('assets/invader.png');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-    border-radius: 10px;
- 
-}
+    .btn {
+      font-family: 'Orbitron', sans-serif;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-.shooter {
-  background-image: url('assets/spaceship.png');
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
-  
-}
+    .btn-primary {
+      background: linear-gradient(to right, #a855f7, #ec4899);
+      color: white;
+      border: none;
+    }
 
-.laser {
-  background-image: url('assets/laser.png');
-  background-size: contain;
-  background-position: center; 
-  background-repeat: no-repeat;
-}
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-.boom {
-  background-image: url('assets/invader-dead.png');
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
-}
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+    }
+
+    .shoot-btn {
+      background: linear-gradient(to right, #a855f7, #ec4899);
+      color: white;
+    }
+
+    .command-container {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .instructions {
+      margin-top: 2rem;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .instructions h2 {
+      color: #c084fc;
+      margin-bottom: 1rem;
+    }
+
+    .key-controls {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .key-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    kbd {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-family: monospace;
+    }
+
+    @keyframes glow {
+      from { filter: brightness(1); }
+      to { filter: brightness(1.3); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes shoot {
+      0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes explode {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .restart {
+      margin-top: 1rem;
+    }

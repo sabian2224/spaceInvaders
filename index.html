@@ -4,42 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Space Invaders</title>
-  <link rel="stylesheet" href="styles.css"> 
-
-  <link href="https://fonts.cdnfonts.com/css/panton" rel="stylesheet">
-
+ <link rel="stylesheet" href="styles.css">
+  </style>
 </head>
 <body>
-
-
   <div class="dashboard">
-
-    <h1>SPACE INVADERS</h1>
+    <h1 class="game-title">SPACE INVADERS</h1>
     <h1 class="results">0</h1>
+
     <div class="grid"></div>
-   
-    <button class="myBtn shoot-btn" onclick="shootButton()">
-      shoot
+    
+    <button class="btn shoot-btn" onclick="shootButton()">
+      FIRE
     </button>
 
     <div class="command-container">
-      <button class="myBtn" onclick="moveLeftButton()">
-        <img src="assets/left-arrow.png" class="btn-icon">
+      <button class="btn btn-secondary" onclick="moveLeftButton()">
+        ← MOVE LEFT
       </button>
 
-      <button class="myBtn" onclick="moveRightButton()">
-        <img src="assets/right-arrow.png" class="btn-icon">
+      <button class="btn btn-secondary" onclick="moveRightButton()">
+        MOVE RIGHT →
       </button>
     </div>
 
-   <!--Should be fixed-->
-    <a href="index.html"><button class="myBtn restart">Restart</button></a>
-    
+    <button class="btn btn-primary restart" onclick="window.location.reload()">RESTART</button>
 
-
+    <div class="instructions">
+      <h2>HOW TO PLAY</h2>
+      <div class="key-controls">
+        <div class="key-control">
+          <kbd>←</kbd>
+          <span>Move Left</span>
+        </div>
+        <div class="key-control">
+          <kbd>→</kbd>
+          <span>Move Right</span>
+        </div>
+        <div class="key-control">
+          <kbd>↑</kbd>
+          <span>Fire Laser</span>
+        </div>
+      </div>
+    </div>
   </div>
- 
+
   <script src="app.js"></script>
-  
 </body>
 </html>
